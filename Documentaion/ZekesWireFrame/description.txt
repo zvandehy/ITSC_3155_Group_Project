@@ -1,0 +1,7 @@
+The idea with my version, is there are 2 types of pages: Profile pages and Network pages
+
+When you view your own profile page, you can edit your wish list. When you view other profile pages you can  add an item as "I am getting this"
+
+MISSING: Own profile page needs list of gifts you are getting for other people
+
+Network pages shows all of your "friends" and you can click on them to go to their profile page. You can also see people that are 1 friend removed

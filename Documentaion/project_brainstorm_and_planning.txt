@@ -1,0 +1,33 @@
+	• Wishlist so that people don't buy each other the same gifts
+	• Running list of your favorite shows (YouTube, tv, sports games) so you don't forget what shows you want to watch
+	• Spotify(or any music player) group playlist
+	• Send a text if they can't pass the user test
+	• Random restaurant generator for people to visit
+
+
+Order of difficulty:
+(Hardest to Easiest)
+	1. Shows
+	2. Restaurant
+	3. Music
+	4. Drunk Test
+	5. Wishlist
+	
+	
+Wishlist User Stories
+	• A user creates an account and invites his family to join a group
+	• A user creates a wish list. Later he finds other items he wants, so he adds them to his list.
+	• A user views items on his family's wish lists. He finds a gift that he wants to get for his brother, so he marks that he is getting it. Other family members now know not to get the same gift, because it disappears from the brother's wish list when they view it. The brother doesn't know the difference, because his list doesn't change.
+	• A user changes his mind on the gift he is getting for his brother, so he unmarks the item from the list and it reappears on the other family member's lists.
+	• A user wants to check which gifts they said they would get. The user can go to their profile to see which gifts they have assigned themselves to get for others.
+	• A user wants to get a gift that isn't on the family member's list, so they can add it
+
+	• What about when someone has multiple things they might want to get them?
+	• Should users be able to toggle-on the hidden items?
+	• Two users decide that they want to split the cost of a single gift (Does the software need to support this?)
+
+Other group review:
+	• It shouldn't just disappear because then they might think to get them the same item anyways. "I thought
+	• How are we going to store the wish list - hashing table?
+	
+
