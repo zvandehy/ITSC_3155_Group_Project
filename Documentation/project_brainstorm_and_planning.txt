@@ -1,3 +1,4 @@
+Project Brainstorming Ideas:
 	• Wishlist so that people don't buy each other the same gifts
 	• Running list of your favorite shows (YouTube, tv, sports games) so you don't forget what shows you want to watch
 	• Spotify(or any music player) group playlist
@@ -13,7 +14,11 @@ Order of difficulty:
 	4. Drunk Test
 	5. Wishlist
 	
-	
+-> Moving forward with Wishlist Project	
+
+WishList Project description:
+The problem we aim to solve is family members receiving the same gift during the holidays. Every year in big families there is at least one gift that every family member gets for someone else. For example, last year 2 of my 4 brothers AND my parents bought me headphones because I listed that on my wishlist.
+
 Wishlist User Stories
 	• A user creates an account and invites his family to join a group
 	• A user creates a wish list. Later he finds other items he wants, so he adds them to his list.
