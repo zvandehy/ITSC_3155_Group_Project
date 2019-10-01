@@ -36,3 +36,6 @@ Other group review:
 	• How are we going to store the wish list - hashing table?
 	
 
+
+Wireframing review:
+We are going to use profile pages like in Zeke's wireframe to display the different lists. We will use JR's Friend's page instead of the Social Network page. We need to add a action/view for Adding friends and  button for viewing items that they selected to gift. 
