@@ -5,7 +5,6 @@ Project Brainstorming Ideas:
 	• Send a text if they can't pass the user test
 	• Random restaurant generator for people to visit
 
-
 Order of difficulty:
 (Hardest to Easiest)
 	1. Shows
@@ -17,7 +16,11 @@ Order of difficulty:
 -> Moving forward with Wishlist Project	
 
 WishList Project description:
-The problem we aim to solve is family members receiving the same gift during the holidays. Every year in big families there is at least one gift that every family member gets for someone else. For example, last year 2 of my 4 brothers AND my parents bought me headphones because I listed that on my wishlist.
+The problem we aim to solve is family members receiving the same gift during the holidays. Every year in big families there is at least one gift that every family member gets for someone else. For example, last year 2 of my 4 brothers AND my parents bought me headphones because I listed that on my wishlist. The project aims to solve this issue by creating a network of dynamic wishlists, where items disappear from the wish list when on user marks that they are getting it. The gift recipient will not know what items were checked off from their list in order to keep the gifts a surprise.
+
+Stakeholders:
+	• Person making the wishlist
+	• Person viewing the wishlist / getting the gift
 
 Wishlist User Stories
 	• A user creates an account and invites his family to join a group
@@ -25,17 +28,18 @@ Wishlist User Stories
 	• A user views items on his family's wish lists. He finds a gift that he wants to get for his brother, so he marks that he is getting it. Other family members now know not to get the same gift, because it disappears from the brother's wish list when they view it. The brother doesn't know the difference, because his list doesn't change.
 	• A user changes his mind on the gift he is getting for his brother, so he unmarks the item from the list and it reappears on the other family member's lists.
 	• A user wants to check which gifts they said they would get. The user can go to their profile to see which gifts they have assigned themselves to get for others.
-	• A user wants to get a gift that isn't on the family member's list, so they can add it
-
-	• What about when someone has multiple things they might want to get them?
-	• Should users be able to toggle-on the hidden items?
-	• Two users decide that they want to split the cost of a single gift (Does the software need to support this?)
+	• A user wants to get a gift that isn't on the family member's list, so they can add it to the other family member's list, without notifying that family member.
+	• A user decides they want to get a family member two things from their list, so they can mark multiple gift items.
+	• A user is curious if an unlisted item is being gifted, so they can toggle-off the hidden items. This will display items that other users have marked that they are getting for that family member.
+	• A user wants to receive multiple of the same item. They can make this distinction when putting the item on their list. Items only disappear from the list when the maximum # (assigned by the user) has been reached.
 
 Other group review:
-	• It shouldn't just disappear because then they might think to get them the same item anyways. "I thought
 	• How are we going to store the wish list - hashing table?
 	
 
-
 Wireframing review:
 We are going to use profile pages like in Zeke's wireframe to display the different lists. We will use JR's Friend's page instead of the Social Network page. We need to add a action/view for Adding friends and  button for viewing items that they selected to gift. 
+
+UML Diagram:
+	• Person Object: Name, Photo, optional description, wishlist, give list, friends list, personID
+	• Wish Item Object: Name, optional photo, (optional) description, max #, person getting the item ID, itemID,
