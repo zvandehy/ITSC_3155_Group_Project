@@ -1,0 +1,36 @@
+<div class="container text-center">
+	<div class="row">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel-body">
+					<button type="button" class="btn btn-default btn-sm">
+						<span class="glyphicon glyphicon-plus"></span> Add Friend
+					</button>
+				</div>
+			</div>
+		</div>
+		<% for i in 0..(friends.length / 3) do %>
+		    <div class="row">
+		        <% for j in 0...3 do %>
+		            <% if i * 3 + j < friends.length %>
+		                <% friend = friends[i * 3 + j] %>
+        			    <div class="col-sm-4">
+            				<div class="well">
+            				    <p>
+            				        <h3><%= link_to friend.name, friend_path(friend) %></h3>
+            				        <%= link_to "View Profile", friend_path(friend) %>
+            				    </p>
+            					<br>
+            					<p>
+            						<button type="button" class="btn btn-default btn-sm">
+            							<span class="glyphicon glyphicon-remove"></span> Delete Friend
+            						</button>
+            					</p>
+            				</div>
+            			</div>
+                    <% end %>
+                <% end %>
+		    </div>
+        <% end %>
+    </div>
+</div>
