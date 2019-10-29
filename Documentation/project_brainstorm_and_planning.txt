@@ -35,6 +35,9 @@ Wishlist User Stories
 
 Other group review:
 	• How are we going to store the wish list - hashing table?
+
+Requirements:
+
 	
 
 Wireframing review:

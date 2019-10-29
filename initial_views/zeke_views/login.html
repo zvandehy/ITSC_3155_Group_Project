@@ -2,21 +2,25 @@
 <html>
     <head>
         <title>Login Page!</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css" />
+ </head>
     </head>
     <body>
         <!-- App Bar-->
         <!-- https://www.w3schools.com/howto/howto_css_icon_bar.asp -->
-        <div class="appbar">
-                <a href="#"><img src="assets/logo.png" height=50px width=50px></a>
-                <a href="#">My List</a>
-                <a href="#">My Friends</a>
-                <a href="#">Log In</a>
+        <div class="navbar">
+            <ul class="navbar">
+                <li class="navbar-item"><a href="#"><img src="assets/logo.png" height=50px width=50px></a></li>
+                <li class="navbar-item"><a href="#" class="a">My List</a></li>
+                <li class="navbar-item"><a href="#">My Friends</a></li>
+                <li class="navbar-item"><a href="#">Log In</a></li>
+            </ul> 
         </div>
         <center>
         <img src="assets/logo.png" height=150px width=150px>
         <div id="center-login-pane">
             <form>
-                <h4>Username</h4><br>
+                <h4 class="a">Username</h4><br>
                 <input type="text" name="username"><br>
                 <h4>Password</h4>
                 <input type="password" name="password"><br>
