@@ -1,0 +1,2 @@
+module WishlistitemsHelper
+end
