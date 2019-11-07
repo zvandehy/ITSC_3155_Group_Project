@@ -3,42 +3,69 @@
     <a class="navbar-brand" href="#HOME">Logo</a>
     <div class="navbar-nav">
         <ul class="navbar-nav">
-            <li class="nav-item"> <a class="nav-link" href="myProfile"> My List </a></li>
-            <li class="nav-item"> <a class="nav-link" href="#friends"> Friends </a></li>
-            <li class=""nav-item> <a class="nav-link logout" href="logout"> Logout </a></li>
+            <li class="nav-item"> <a class="nav-link" href="#login"> Login </a></li>
+            <li class="nav-item"> <a class="nav-link" href="MyWishListItems"> My Profile </a></li>
+            <li class="nav-item"> <a class="nav-link" href="friends"> Friends </a></li>
+            <li class="nav-item"> <a class="nav-link logout" href="logout"> Logout </a></li>
         </ul> 
     </div>
 </nav>
+
       
 <div class="login-wrap">
     <div class="login-html">
-        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-        <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Forgot Password</label>
+        <!-- Select Sign In or Create Account -->
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+        <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Create Account</label>
         <div class="login-form">
+            
+        <!-- Login Fields -->
             <div class="sign-in-htm">
                 <div class="group">
                     <label for="user" class="label">Email</label>
-                    <input id="user" type="text" class="input">
+                    <input id="user" type="text" class="input" placeholder="  example@email.com">
                 </div>
                 <div class="group">
                     <label for="pass" class="label">Password</label>
-                    <input id="pass" type="password" class="input" data-type="password">
+                    <input id="pass" type="password" class="input" data-type="password" placeholder="  password">
                 </div>
                 <div class="group">
                     <input type="submit" class="button" value="Sign In">
                 </div>
                 <div class="hr"></div>
             </div>
+            
+        <!-- Create Account Fields -->
             <div class="for-pwd-htm">
                 <div class="group">
-                    <label for="user" class="label">Username or Email</label>
-                    <input id="user" type="text" class="input">
+                    <label for="name" class="label">Full Name</label>
+                    <input id="name" type="text" class="input" placeholder="  Your Name">
                 </div>
                 <div class="group">
-                    <input type="submit" class="button" value="Reset Password">
+                    <label for="user" class="label">Email</label>
+                    <input id="user" type="text" class="input" placeholder="  example@email.com">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">Password</label>
+                    <input id="pass" type="password" class="input" data-type="password" placeholder="  password">
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="Create Account">
                 </div>
                 <div class="hr"></div>
             </div>
         </div>
+        <!-- Bottom of page text -->
+        <div class="welctext">
+                <center>
+                    <br>
+                    <br>
+                <p> Welcome to GiftO! </p> 
+                <p> Please login above if you already have </p>
+                <p> an account! If you are new to GiftO, </p> 
+                <p> simply select Create Account to begin! </p> 
+                </center>
+        </div>
+        
     </div>
 </div>
