@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-    has_many :gifts
     def new
     end
     def create
