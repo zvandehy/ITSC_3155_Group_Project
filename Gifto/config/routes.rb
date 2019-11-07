@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'welcome/index'
   
-  resources :users
+  resources :users do
+    resources :gifts
+  end
   # resources :wishlistitems, :path => "MyWishListItems"
   
   root 'welcome#index'
