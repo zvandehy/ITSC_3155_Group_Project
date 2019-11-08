@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_07_155831) do
+ActiveRecord::Schema.define(version: 2019_11_08_204945) do
 
   create_table "gifts", force: :cascade do |t|
-    t.integer "recipient_id"
+    t.integer "user_id"
     t.integer "giver_id"
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["giver_id"], name: "index_gifts_on_giver_id"
-    t.index ["recipient_id"], name: "index_gifts_on_recipient_id"
+    t.index ["user_id"], name: "index_gifts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
