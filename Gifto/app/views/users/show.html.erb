@@ -1,4 +1,10 @@
 <div class="container bootstrap snippet">
+    <% if current_user == @user %>
+        <h1>My Profile</h1>
+    <% else %>
+        <h1>Friend Profile</h1>
+    <% end %>
+    
     <div class="row">
         <div class="col-sm-10">
             <h2>Name: <%= @user.name %></h2>
