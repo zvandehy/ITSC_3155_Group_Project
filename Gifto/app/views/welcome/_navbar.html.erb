@@ -3,7 +3,7 @@
     <div class="navbar-nav">
         <ul class="navbar-nav">
             <% if current_user %>
-                <li class="nav-item"> <%= link_to "My List", current_user, {:class=>"nav-link"} %> </li>
+                <li class="nav-item"> <%= link_to "My Profile", current_user, {:class=>"nav-link"} %> </li>
                 <li class="nav-item"> <%= link_to "Friends", users_path, {:class=>"nav-link"} %> </li>
                 <li class="nav-item"> <%= link_to "Logout", logout_path, {:class=>"nav-link logout"} %> </li>
             <% else %>

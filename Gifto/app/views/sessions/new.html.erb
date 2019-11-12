@@ -1,5 +1,8 @@
+
+<!-- Error -->
 <p id="alert"><%= alert %></p>
-<h1>Login</h1>
+
+<!-- New sign in code
 <%= form_tag sessions_path do |form| %>
 <div class="sign-in-htm">
     <div class="field">
@@ -15,3 +18,46 @@
     </div>
 </div>
 <% end %>
+-->
+
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+        <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Create Account</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <br>
+                <%= form_tag sessions_path do |form| %>
+                <div class="group">
+                    <div class="label">
+                    <%= label_tag :email %> </div>
+                    <div class="input">
+                    <%= text_field_tag :email %> </div>
+                </div>
+                <div class="group">
+                    <div class="label">
+                    <%= label_tag :password %></div>
+                    <div class="input">
+                    <%= password_field_tag :password %></div>
+                </div>
+                <div class="group">
+                    <%= submit_tag "Login", class: "button" %>
+                </div>
+                <% end %>
+                <div class="hr"></div>
+            </div>
+        </div>
+        
+        <!-- Bottom of page text -->
+        <div class="welctext">
+                <center>
+                    <br>
+                    <br>
+                <p> Welcome to GiftO! </p> 
+                <p> Please login above if you already have </p>
+                <p> an account! If you are new to GiftO, </p> 
+                <p> simply select Create Account to begin! </p> 
+                </center>
+        </div>
+    </div>
+</div>
