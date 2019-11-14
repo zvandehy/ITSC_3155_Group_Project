@@ -7,7 +7,7 @@
     <% if current_user == @user %>
         <h1>My Profile</h1>
     <% else %>
-        <h1>Friend Profile</h1>
+        <h1>My Friend</h1>
     <% end %>
     <br>
     
@@ -15,8 +15,11 @@
         <div class="col-sm-10">
             <h2>Name: <%= @user.name %></h2>
             <h2>Email: <%= @user.email %></h2>
-            <%= link_to 'Edit', edit_user_path(@user) %>
-            <%= link_to 'Destroy', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% if current_user == @user %>
+                <%= link_to 'Edit', edit_user_path(@user) %>
+                <%= link_to 'Destroy', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+            
             
         </div>
         
@@ -25,10 +28,13 @@
                 <th>Name</th>
                 <th>Details</th>
                 <% @user.gifts.each do |gift| %>
-                    <p>Gift!</p>
                     <tr>
                         <td><%= gift.name %></td>
                         <td><%= gift.description %></td>
+                        <% if current_user == @user %>
+                            <%= link_to 'Edit', edit_user_gift_path(gift) %>
+                        <% end %>
+                        
                     </tr>
                 <% end %>
                 <%= form_for([@user, @user.gifts.build]) do |f| %>

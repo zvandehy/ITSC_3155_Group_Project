@@ -4,7 +4,9 @@ class GiftsController < ApplicationController
         @gift = @user.gifts.create(gift_params)
         redirect_to user_path(@user)
     end
+    def edit
 
+    end
     private 
         def gift_params
             params.require(:gift).permit(:name, :description)

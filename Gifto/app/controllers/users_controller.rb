@@ -4,11 +4,14 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         @user.save
-        session[:user_id] = @user.id
         redirect_to @user
+        
     end
     def show
         @user = User.find(params[:id])
+    end
+    def show_friend
+         
     end
     def index
         @users = User.all
