@@ -1,9 +1,15 @@
-<div class="container bootstrap snippet">
+
+<br>
+<div class="login-wrap">
+ <div class="login-html">
+     <div class="container bootstrap snippet">
+         <div><%= image_tag("profile.jpg", :height => 100, :width => 100, :alt => "Profile Picture") %></div>
     <% if current_user == @user %>
         <h1>My Profile</h1>
     <% else %>
         <h1>Friend Profile</h1>
     <% end %>
+    <br>
     
     <div class="row">
         <div class="col-sm-10">
