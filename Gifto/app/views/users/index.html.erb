@@ -1,4 +1,10 @@
-<h1>All Users</h1>
+<!-- Friends Page -->
+
+<br>
+<div class="login-wrap">
+ <div class="login-html">
+<div class="allTitle">All Users</div>
+<br>
 
 <table class="u-table">
     <thread>
@@ -6,14 +12,14 @@
             <th></th>
             <th>Name</th>
             <th>Email</th>
-            <th></th>
+            <th>View</th>
         </tr>
     </thread>
     
     <tbody>
     <% @users.each do |user| %>
         <tr>
-            <td><img src="profile.png" alt="" border=3 height=100 width=100></img></td>
+            <td><img src="https://imgur.com/8jNuyUl.jpg" height=100 width=100 alt="Profile Picture" border=3></img></td>
             <td><%= user.name %></td>
             <td><%= user.email %></td>
             <td><%= link_to "View Profile", user_path(user) %></td>
@@ -21,3 +27,5 @@
     <% end %>
     </tbody>
 </table>
+</div>
+</div>

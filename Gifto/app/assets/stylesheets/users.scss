@@ -5,7 +5,7 @@
     border: solid 1px #DDEEEE;
     border-collapse: collapse;
     border-spacing: 0;
-    font: normal 14px Arial, sans-serif;
+    font: normal 20px Arial, sans-serif;
     color: black;
     background-color: white;
 }
@@ -16,10 +16,19 @@
     padding: 10px;
     text-align: left;
     text-shadow: 1px 1px 1px #fff;
+    font: normal 14px Arial, sans-serif;
 }
 .u-table tbody td {
     border: solid 1px #DDEEEE;
     color: #333;
-    padding: 10px;
+    padding: 15px;
     text-shadow: 1px 1px 1px #fff;
+    font: normal 14px Arial, sans-serif;
 }
+
+.allTitle {
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+}
+
