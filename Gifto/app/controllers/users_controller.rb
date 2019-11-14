@@ -2,10 +2,15 @@ class UsersController < ApplicationController
     def new
     end
     def create
-        @user = User.new(user_params)
-        @user.save
-        session[:user_id] = @user.id
-        redirect_to @user
+        if User.find_by_email(user_params[:email]) then
+            flash.now[:alert] = "Email is already in use"
+            render "new"
+        else
+            @user = User.new(user_params)
+            @user.save
+            session[:user_id] = @user.id
+            redirect_to @user
+        end
     end
     def show
         @user = User.find(params[:id])
