@@ -19,7 +19,7 @@
     <tbody>
     <% @users.each do |user| %>
         <tr>
-            <td><img src="https://imgur.com/8jNuyUl.jpg" height=100 width=100 alt="Profile Picture" border=3></img></td>
+            <td><%= image_tag("profile.jpg", :height => 100, :width => 100, :alt => "Profile Picture") %></td>
             <td><%= user.name %></td>
             <td><%= user.email %></td>
             <td><%= link_to "View Profile", user_path(user) %></td>
