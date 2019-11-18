@@ -29,12 +29,12 @@
                 <br>
                 <%= form_tag sessions_path do |form| %>
                 <div class="group">
-                    <%= label_tag :email, "Email", class:"label" %> 
+                    <%= label_tag :email, "Email", class:"label"%> 
                     <%= text_field_tag :email, nil, class:"input"%> 
                 </div>
                 <div class="group">
-                    <%= label_tag :password, "Email", class:"label"%>
-                    <%= password_field_tag :password, nil, class:"input" %>
+                    <%= label_tag :password, "Password", class:"label"%>
+                    <%= password_field_tag :password, nil, class:"input"%>
                 </div>
                 <div class="group">
                     <%= submit_tag "Login", class: "button" %>
