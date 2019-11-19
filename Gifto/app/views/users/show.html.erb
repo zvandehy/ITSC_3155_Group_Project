@@ -47,7 +47,7 @@
                 <%= form_for([@user, @user.gifts.build]) do |f| %>
                     <tr>
                         <td><%= f.text_field :name %></td>
-                        <td><%= f.text_field :description %></td>
+                        <td><%= f.text_area :description %></td>
                         <!--<%= f.hidden_field :user_id, value: @user.id %>-->
                         <!--<%= f.hidden_field :giver_id, value: -1 %>-->
                         <td><%= f.submit %></td>
