@@ -1,23 +1,25 @@
 <!-- Change Gift Page -->
 <hr>
 <div class="login-wrap">
- <div class="login-html">
-<div class="container bootstrap snippet">
-        <div class="login-form">
-            <!---->
-            
-            <h2>Edit Gift</h2>
-            <br>
-            <div class="group">
-
-                </div>
-                <div class="group">
-
-                </div>
-                <div class="group">
-
-                </div>
-        </div>
+    <div class="login-html">
+        <div class="container bootstrap snippet">
+            <div class="login-form">
+                <h2>Edit Gift</h2>
+                <br>
+                <%= form_for :gift, url: user_gift_path(user_id: @gift.user_id), method: :patch do |f| %>
+                    <div class="group">
+                            <%= f.label :name, class: "label" %>
+                            <%= f.text_field :name, class:"input" %>
+                    </div>
+                    <div class="group">
+                            <%= f.label :description, class: "label"  %>
+                            <%= f.text_field :description, class:"input" %>
+                        </div>
+                       
+                        <div class="group">
+                            <%= f.submit class: "button" %>
+                    </div>
+                <% end %>
     </div>
 </div>
 </div>

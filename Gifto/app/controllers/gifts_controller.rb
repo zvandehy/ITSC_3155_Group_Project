@@ -5,7 +5,21 @@ class GiftsController < ApplicationController
         redirect_to user_path(@user)
     end
     def edit
-
+        # @user = User.find(params[:user_id])
+        @gift = Gift.find(params[:id])
+        @user = User.find(params[:user_id])
+    end
+    def update
+        @gift = Gift.find(params[:id])
+        @user = User.find(params[:user_id])
+        if @gift.update(gift_params)
+            # if @user.update()
+            #     redirect_to @user
+            # end
+            redirect_to @user
+        else 
+            render 'edit'
+        end
     end
     private 
         def gift_params

@@ -33,7 +33,7 @@ class UsersController < ApplicationController
         end
     end
     def destroy
-        @user = User.find(params[:id])
+        @user = User.find(params[:user_id])
         if (current_user == @user)
             session[:user_id] = nil
             @user.destroy
