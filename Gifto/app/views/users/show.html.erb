@@ -39,7 +39,7 @@
                         <% if current_user == @user %>
                             <td><%= link_to 'Edit Gift', edit_user_gift_path(user_id: gift.user_id, id: gift.id) %></td>
                         <% else %>
-                            <td>Promise Gift</td>
+                            <td><%= link_to 'Promise Gift' %></td>
                         <% end %>
                     </tr>
                 <% end %>
