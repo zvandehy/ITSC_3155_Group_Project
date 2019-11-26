@@ -16,3 +16,25 @@
  a:hover {
      color: orange;
  }
+ 
+table input[type="submit"] {
+ padding: 10px;
+ border-radius: 20px;
+ color: white;
+ background-color: #1161ee;
+ text-shadow: 1px 1px #1161ee;
+ border: none;
+}
+
+input[type="submit"] {
+ cursor: pointer;
+}
+
+table a {
+ padding: 5px 10px;
+ border-radius: 15px;
+ color: #edf3ff;
+ background-color: #343a40;
+ text-shadow: none;
+}
+
