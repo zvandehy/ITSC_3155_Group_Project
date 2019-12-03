@@ -4,6 +4,14 @@ Rails.application.routes.draw do
   resources :users do
     resources :gifts
   end
+  
+  resources :gifts do
+    collection do
+      post :promise
+      post :unpromise
+    end
+  end
+  
   # resources :wishlistitems, :path => "MyWishListItems"
   
   resources :sessions, only: [:new, :create, :destroy]

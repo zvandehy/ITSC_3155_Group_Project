@@ -21,6 +21,18 @@ class GiftsController < ApplicationController
             render 'edit'
         end
     end
+    def promise
+        @gift = Gift.find(params[:id])
+        @user = User.find(params[:user_id])
+        @gift.update_attribute(:giver_id, current_user.id)
+        redirect_to user_path(@user)
+    end
+    def unpromise
+        @gift = Gift.find(params[:id])
+        @user = User.find(params[:user_id])
+        @gift.update_attribute(:giver_id, nil)
+        redirect_to user_path(@user)
+    end
     private 
         def gift_params
             params.require(:gift).permit(:name, :description)
