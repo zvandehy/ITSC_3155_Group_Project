@@ -18,4 +18,12 @@ class SessionsController < ApplicationController
     redirect_to root_url, notice: "Logged out!"
   end
   
+  
+  before_action :redirect_home, :only=>[:new]
+  private
+    def redirect_home
+      if current_user
+        redirect_to current_user
+      end
+    end
 end
