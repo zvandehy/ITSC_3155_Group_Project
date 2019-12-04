@@ -23,15 +23,18 @@ Stakeholders:
 	• Person viewing the wishlist / getting the gift
 
 Wishlist User Stories
-	• A user creates an account and invites his family to join a group
-	• A user creates a wish list. Later he finds other items he wants, so he adds them to his list.
-	• A user views items on his family's wish lists. He finds a gift that he wants to get for his brother, so he marks that he is getting it. Other family members now know not to get the same gift, because it disappears from the brother's wish list when they view it. The brother doesn't know the difference, because his list doesn't change.
+	• A user creates an account with a username, email, and password. Creating an account automatically logs him in. His wishlist is initialized empty.
+	• A user logs in. He is redirected to his profile page which has his wishlist in it.
+	• A user finds an item he wants, so he adds it to his list. He includes the name of the gift and details that about the gift.
+	• A user views items on his family's wish lists. He finds a gift that he wants to get for his brother, so he marks that he is getting it. Other family members now know not to get the same gift, because it disappears from the brother's wish list when they view the list. The brother doesn't know the difference, because his list doesn't change.
 	• A user changes his mind on the gift he is getting for his brother, so he unmarks the item from the list and it reappears on the other family member's lists.
 	• A user wants to check which gifts they said they would get. The user can go to their profile to see which gifts they have assigned themselves to get for others.
 	• A user wants to get a gift that isn't on the family member's list, so they can add it to the other family member's list, without notifying that family member.
 	• A user decides they want to get a family member two things from their list, so they can mark multiple gift items.
 	• A user is curious if an unlisted item is being gifted, so they can toggle-off the hidden items. This will display items that other users have marked that they are getting for that family member.
 	• A user wants to receive multiple of the same item. They can make this distinction when putting the item on their list. Items only disappear from the list when the maximum # (assigned by the user) has been reached.
+	• A user wants to know what gifts they have promised for other people. So he can visit his profile page to see what items he has promised and for who.
+	• A user is done looking at wish lists, so he decides to log out so that nobody else can open his laptop and look at what gifts he is getting them! The user is redirected to the login page.
 
 Other group review:
 	• How are we going to store the wish list - hashing table?
