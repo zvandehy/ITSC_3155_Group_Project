@@ -19,15 +19,6 @@
     transition:padding 0.5s linear;  
   }
   
-  body {
-      margin:0;
-      color:#edf3ff;
-      background:#c8c8c8;
-      background:url(https://hdqwalls.com/download/material-design-4k-2048x1152.jpg) fixed;
-      background-size: cover;
-      font:600 16px/18px 'Open Sans',sans-serif;
-  }
-  
   :after,:before{box-sizing:border-box}
   .clearfix:after,.clearfix:before{content:'';display:table}
   .clearfix:after{clear:both;display:block}
@@ -44,7 +35,7 @@
       position:absolute;
       padding:90px 70px 50px 70px;
       margin-bottom: 20px;
-      background:rgba(0,0,0,0.65);
+      background:rgba(0,0,0,0.7);
       box-shadow:0 12px 15px 0 rgba(0,0,0,.3),0 17px 50px 0 rgba(0,0,0,.22);
   }
   .login-html .sign-in-htm,
