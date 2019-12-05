@@ -1,4 +1,4 @@
-<!-- View Profiles -->
+<!-- My Profile -->
 <br>
 <div class="login-wrap">
  <div class="login-html">
@@ -24,20 +24,30 @@
             
         </div>
         
+        <!-- Has no gifts check -->
+                <% if current_user != @user && @user.gifts.length() == 0%>
+                <h2>this should be here if user.gifts=0</h2>
+                
+        <% else %>
+        
         <table class="g-table">
             <thread>
                 <tr>
-                    <th>Gift Name</th>
-                    <th>Description</th>
+                    <th></th>
+                    <th>Gifts (i has idea for layout)</th>
                 </tr>
             </thread>
             
             <tbody>
-                <% @user.gifts.each do |gift| %>
+                
+                
+                
+                
+                <% @user.gifts.each do |gift|%>
                     <% if @user == current_user or gift.giver_id == nil or gift.giver_id == current_user.id %>
                         <tr>
-                            <td style="word-wrap"><%= gift.name %></td>
-                            <td style="word-wrap"><%= gift.description %></td>
+                            <td><%= image_tag("gifticon.png", :height => 90, :width => 90, :alt => "Gift Picture") %></td>
+                            <td style="word-wrap"><bold><%= gift.name %></bold> <br> <%= gift.description %> </td>
                             <% if current_user == @user %>
                                 <td><%= link_to 'Edit Gift', edit_user_gift_path(user_id: gift.user_id, id: gift.id) %></td>
                             <% else %>
@@ -52,11 +62,14 @@
                         </tr>
                     <% end %>
                 <% end %>
+                
+                <% end %>
+                
                 <% if current_user == @user %>
                 <%= form_for([@user, @user.gifts.build]) do |f| %>
                     <tr>
-                        <td><%= f.text_field :name %></td>
-                        <td><%= f.text_area :description %></td>
+                        <td></td>
+                        <td><%= f.text_field :name %><br><br><%= f.text_area :description %></td>
                         <!--<%= f.hidden_field :user_id, value: @user.id %>-->
                         <!--<%= f.hidden_field :giver_id, value: -1 %>-->
                         <td><%= f.submit %></td>
