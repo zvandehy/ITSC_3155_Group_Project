@@ -26,15 +26,19 @@
         
         <!-- Has no gifts check -->
                 <% if current_user != @user && @user.gifts.length() == 0%>
-                <h2>this should be here if user.gifts=0</h2>
+                <br> <br>
+                <div class="imgleft"><%= image_tag("gifticonclear.png", :height => 90, :width => 90, :alt => "Gift Picture") %></div>
+                <h3>No gifts have been added!</h3>
+                <h4>Contact <%= @user.name %> to add some gifts for you to get them!</h4>
                 
         <% else %>
         
+        <h2>Gifts (i have idea for new layout)</h2>
         <table class="g-table">
             <thread>
                 <tr>
                     <th></th>
-                    <th>Gifts (i has idea for layout)</th>
+                    <th></th>
                 </tr>
             </thread>
             
