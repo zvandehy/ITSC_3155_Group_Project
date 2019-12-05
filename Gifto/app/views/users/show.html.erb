@@ -1,18 +1,19 @@
-<!-- View Profile -->
+<!-- View Profiles -->
 <br>
 <div class="login-wrap">
  <div class="login-html">
      <div class="container bootstrap snippet">
+         <div class="profilepic"><%= image_tag("profile.jpg", :height => 120, :width => 120, :alt => "Profile Picture") %></div>
     <% if current_user == @user %>
-        <h2>My Profile (<%= @user.name %> : <%= @user.email %>)</h1>
+        <p class="usern"><%= @user.name %></p>
     <% else %>
-        <h2><%= @user.name %> (<%= @user.email %>)</h2>
+        <p class="usern"><%= @user.name %></p>
     <% end %>
-         <div><%= image_tag("profile.jpg", :height => 100, :width => 100, :alt => "Profile Picture") %></div>
+         
     <br>
-    
     <div class="row">
         <div class="col-sm-10">
+            <br>
             <% if current_user == @user %>
                 <%= link_to 'Profile Settings', edit_user_path(@user) %>
                 <br>
@@ -26,8 +27,8 @@
         <table class="g-table">
             <thread>
                 <tr>
-                    <th>Name</th>
-                    <th>Details</th>
+                    <th>Gift Name</th>
+                    <th>Description</th>
                 </tr>
             </thread>
             
@@ -35,8 +36,8 @@
                 <% @user.gifts.each do |gift| %>
                     <% if @user == current_user or gift.giver_id == nil or gift.giver_id == current_user.id %>
                         <tr>
-                            <td><%= gift.name %></td>
-                            <td><%= gift.description %></td>
+                            <td style="word-wrap"><%= gift.name %></td>
+                            <td style="word-wrap"><%= gift.description %></td>
                             <% if current_user == @user %>
                                 <td><%= link_to 'Edit Gift', edit_user_gift_path(user_id: gift.user_id, id: gift.id) %></td>
                             <% else %>
