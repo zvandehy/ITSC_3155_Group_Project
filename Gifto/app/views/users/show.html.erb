@@ -17,7 +17,7 @@
             <% if current_user == @user %>
                 <%= link_to 'Profile Settings', edit_user_path(@user) %>
                 <br>
-                <%= link_to 'Delete Account', user_path(@user), method: :delete, data: { confirm: 'Are you sure you would like to delete your account? Please note, this cannot be undone.' } %>
+                <%= link_to 'Delete Account', user_path(@user), method: :delete, data: { confirm: 'Are you sure you would like to delete your account? This cannot be undone.' } %>
                 <br><br>
             <% end %>
             
@@ -44,17 +44,14 @@
             
             <tbody>
                 
-                
-                
-                
                 <% @user.gifts.each do |gift|%>
                     <% if @user == current_user or gift.giver_id == nil or gift.giver_id == current_user.id %>
                         <tr>
                             <td><%= image_tag("gifticon.png", :height => 90, :width => 90, :alt => "Gift Picture") %></td>
                             <td style="word-wrap"><bold><%= gift.name %></bold> <br> <%= gift.description %> </td>
                             <% if current_user == @user %>
-                                <td><%= link_to 'Edit Gift', edit_user_gift_path(user_id: gift.user_id, id: gift.id) %></td>
-                                <td><%= link_to 'Delete Gift', user_gift_path(user_id: gift.user_id, id: gift.id), method: :delete, data: { confirm: 'Delete ' + gift.name +  '?' } %></td>
+                                <td><%= link_to 'Edit Gift', edit_user_gift_path(user_id: gift.user_id, id: gift.id) %>
+                                <br><br><%= link_to 'Delete Gift', user_gift_path(user_id: gift.user_id, id: gift.id), method: :delete, data: { confirm: 'Are you sure you would like to delete ' + gift.name +  '? This cannot be undone.' } %></td>
                             <% else %>
                                 <td>
                                     <% if gift.giver_id == nil %>

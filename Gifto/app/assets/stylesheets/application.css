@@ -38,10 +38,14 @@ table a {
  text-shadow: none;
 }
 
-body {
- /* heres the sky if we want that instead of the modern styled backgrouns
- * background-image: url('https://farm5.staticflickr.com/4020/4347776452_36d68aa699_b.jpg');
- */
- background-image: url('https://hdqwalls.com/download/material-design-4k-2048x1152.jpg');
-}
-
+  body {
+      margin:0;
+      color:#edf3ff;
+      background:#c8c8c8;
+      background:url(https://hdqwalls.com/download/material-design-4k-2048x1152.jpg) fixed;
+       /* heres the sky if we want that instead of the modern styled backgrouns
+        * background-image: url('https://farm5.staticflickr.com/4020/4347776452_36d68aa699_b.jpg');
+       */
+      background-size: cover;
+      font:600 16px/18px 'Open Sans',sans-serif;
+  }
