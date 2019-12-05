@@ -54,6 +54,7 @@
                             <td style="word-wrap"><bold><%= gift.name %></bold> <br> <%= gift.description %> </td>
                             <% if current_user == @user %>
                                 <td><%= link_to 'Edit Gift', edit_user_gift_path(user_id: gift.user_id, id: gift.id) %></td>
+                                <td><%= link_to 'Delete Gift', user_gift_path(user_id: gift.user_id, id: gift.id), method: :delete, data: { confirm: 'Delete ' + gift.name +  '?' } %></td>
                             <% else %>
                                 <td>
                                     <% if gift.giver_id == nil %>

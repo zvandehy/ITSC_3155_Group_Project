@@ -21,6 +21,12 @@ class GiftsController < ApplicationController
             render 'edit'
         end
     end
+    def destroy
+        @gift = Gift.find(params[:id])
+        @user = User.find(params[:user_id])
+        @gift.destroy
+        redirect_to @user
+    end
     def promise
         @gift = Gift.find(params[:id])
         @user = User.find(params[:user_id])
