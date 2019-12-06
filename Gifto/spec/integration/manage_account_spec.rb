@@ -22,7 +22,7 @@ feature "Create Account" do
         expect(page).to have_content "John Smith"
     end
     
-    scenario "User successfully out and back in", type: :view do
+    scenario "User successfully out and back in" do
         visit new_user_path
         fill_in "Name", with: "John Smith"
         fill_in "Email", with: "jsmith@uncc.edu"
