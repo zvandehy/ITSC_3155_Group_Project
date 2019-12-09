@@ -1,0 +1,82 @@
+<!-- My Profile -->
+<br>
+<div class="login-wrap">
+ <div class="login-html">
+     <div class="container bootstrap snippet">
+         <div class="profilepic"><%= image_tag("profile.jpg", :height => 120, :width => 120, :alt => "Profile Picture") %></div>
+    <% if current_user == @user %>
+        <p class="usern"><%= @user.name %></p>
+    <% else %>
+        <p class="usern"><%= @user.name %></p>
+    <% end %>
+         
+    <br>
+    <div>
+        <div>
+            <br><br><br><br><br><br><br>
+            <% if current_user == @user %>
+                <%= link_to 'Gifts you Promised <---- NEEDS PAGE', edit_user_path(@user) %>
+                <br>
+                <%= link_to 'Profile Settings', edit_user_path(@user) %>
+                <br>
+                <%= link_to 'Delete Account', user_path(@user), method: :delete, data: { confirm: 'Are you sure you would like to delete your account? This cannot be undone.' } %>
+                <br><br>
+            <% end %>
+            
+            
+        </div>
+        
+        <!-- Has no gifts check -->
+                <% if current_user != @user && @user.gifts.length() == 0%>
+                <br> <br>
+                <div class="imgleft"><%= image_tag("giftnavbar.png", :height => 90, :width => 90, :alt => "Gift Picture") %></div>
+                <h3>No gifts have been added!</h3>
+                <h4>Contact <%= @user.name %> to add some gifts for you to get them!</h4>
+                
+        <% else %>
+        
+        
+        <table class="gifts-table">
+            <h3>Gifts</h3>
+            <tbody>
+                
+                <% @user.gifts.each do |gift|%>
+                    <% if @user == current_user or gift.giver_id == nil or gift.giver_id == current_user.id %>
+                        <tr>
+                            <td><%= image_tag("gifticonclear.png", :height => 90, :width => 90, :alt => "Gift Picture") %></td>
+                            <td><strong><%= gift.name %></strong> <br> <%= gift.description %> </td>
+                            <% if current_user == @user %>
+                                <td><%= link_to 'Edit Gift', edit_user_gift_path(user_id: gift.user_id, id: gift.id) %>
+                                <br><br><%= link_to 'Delete Gift', user_gift_path(user_id: gift.user_id, id: gift.id), method: :delete, data: { confirm: 'Are you sure you would like to delete ' + gift.name +  '? This cannot be undone.' } %></td>
+                            <% else %>
+                                <td>
+                                    <% if gift.giver_id == nil %>
+                                        <%= link_to 'Promise Gift', promise_gifts_path(user_id: gift.user_id, id: gift.id), method: :post %>
+                                    <% elsif gift.giver_id == current_user.id %>
+                                        <%= link_to 'Remove Promise', unpromise_gifts_path(user_id: gift.user_id, id: gift.id), method: :post %>
+                                    <% end %>
+                                </td>
+                            <% end %>
+                        </tr>
+                    <% end %>
+                <% end %>
+                
+                <% end %>
+                
+                <% if current_user == @user %>
+                <%= form_for([@user, @user.gifts.build]) do |f| %>
+                    <tr>
+                        <td><%= image_tag("addgift.png", :height => 90, :width => 90, :alt => "Add Gift Picture") %></td>
+                        <td>Gift Name:<br><%= f.text_field :name %><br>Description:<br><%= f.text_area :description %></td>
+                        <!--<%= f.hidden_field :user_id, value: @user.id %>-->
+                        <!--<%= f.hidden_field :giver_id, value: -1 %>-->
+                        <td><%= f.submit %></td>
+                    </tr>
+                <% end %>
+                <% end %>
+            </tbody>
+            
+              </div> 
+        </div>
+    </div>
+</div>
