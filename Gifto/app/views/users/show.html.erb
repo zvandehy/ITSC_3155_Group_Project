@@ -15,6 +15,8 @@
         <div>
             <br><br><br><br><br><br><br>
             <% if current_user == @user %>
+                <%= link_to 'Gifts you Promised <---- NEEDS PAGE', edit_user_path(@user) %>
+                <br>
                 <%= link_to 'Profile Settings', edit_user_path(@user) %>
                 <br>
                 <%= link_to 'Delete Account', user_path(@user), method: :delete, data: { confirm: 'Are you sure you would like to delete your account? This cannot be undone.' } %>
