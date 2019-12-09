@@ -7,7 +7,11 @@ feature "Create wishlist" do
         fill_in "Email", with: "jsmith@uncc.edu"
         fill_in "Password", with: "Password123"
         click_button "Create Account"
+        fill_in "gift_name", with: "Eggs"
+        fill_in "gift_description", with: "One dozen, large, white"
         click_button "Create Gift"
+        expect(page).to have_content "Egg"
+        expect(page).to have_content "One dozen, large, white"
         expect(page).to have_content "Edit Gift"
         expect(page).to have_content "Delete Gift"
     end
@@ -18,6 +22,8 @@ feature "Create wishlist" do
         fill_in "Email", with: "jsmith@uncc.edu"
         fill_in "Password", with: "Password123"
         click_button "Create Account"
+        fill_in "gift_name", with: "Eggs"
+        fill_in "gift_description", with: "One dozen, large, white"
         click_button "Create Gift"
         click_link "Logout"
         click_link "Create Account"
@@ -27,6 +33,8 @@ feature "Create wishlist" do
         click_button "Create Account"
         click_link "Friends"
         click_link "View"
+        expect(page).to have_content "Egg"
+        expect(page).to have_content "One dozen, large, white"
         expect(page).to have_content "Promise Gift"
     end
 end

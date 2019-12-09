@@ -26,6 +26,11 @@ feature "Promise gifts" do
         fill_in "Email", with: "jsmith@uncc.edu"
         fill_in "Password", with: "Password123"
         click_button "Create Account"
+        fill_in "gift_name", with: "Eggs"
+        fill_in "gift_description", with: "One dozen, large, white"
+        click_button "Create Gift"
+        fill_in "gift_name", with: "Flex Tape"
+        fill_in "gift_description", with: "It even works underwater"
         click_button "Create Gift"
         click_link "Logout"
         click_link "Create Account"
@@ -35,7 +40,7 @@ feature "Promise gifts" do
         click_button "Create Account"
         click_link "Friends"
         click_link "View"
-        click_link "Promise Gift"
+        page.all("tr")[0].click_link "Promise Gift"
         click_link "Logout"
         click_link "Create Account"
         fill_in "Name", with: "Joe Schmoe"
@@ -44,8 +49,8 @@ feature "Promise gifts" do
         click_button "Create Account"
         click_link "Friends"
         page.all("tr")[1].click_link "View"
-        expect(page).not_to have_content "Promise Gift"
-        expect(page).not_to have_content "Remove Promise" 
+        expect(page).not_to have_content "Eggs"
+        expect(page).not_to have_content "One dozen, large, white" 
     end
     
     scenario "Users can still see gifts promised to them" do
