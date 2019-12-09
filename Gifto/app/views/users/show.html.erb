@@ -41,7 +41,7 @@
                 <% @user.gifts.each do |gift|%>
                     <% if @user == current_user or gift.giver_id == nil or gift.giver_id == current_user.id %>
                         <tr>
-                            <td><%= image_tag("gifticon.png", :height => 90, :width => 90, :alt => "Gift Picture") %></td>
+                            <td><%= image_tag("gifticonclear.png", :height => 90, :width => 90, :alt => "Gift Picture") %></td>
                             <td><strong><%= gift.name %></strong> <br> <%= gift.description %> </td>
                             <% if current_user == @user %>
                                 <td><%= link_to 'Edit Gift', edit_user_gift_path(user_id: gift.user_id, id: gift.id) %>
@@ -64,7 +64,7 @@
                 <% if current_user == @user %>
                 <%= form_for([@user, @user.gifts.build]) do |f| %>
                     <tr>
-                        <td></td>
+                        <td><%= image_tag("addgift.png", :height => 90, :width => 90, :alt => "Add Gift Picture") %></td>
                         <td>Gift Name: <%= f.text_field :name %><br><br> Description:<%= f.text_area :description %></td>
                         <!--<%= f.hidden_field :user_id, value: @user.id %>-->
                         <!--<%= f.hidden_field :giver_id, value: -1 %>-->
