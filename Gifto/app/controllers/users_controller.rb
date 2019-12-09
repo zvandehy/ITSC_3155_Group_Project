@@ -16,13 +16,16 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
     end
     def show_friend
-         
+    
     end
     def index
         @users = User.all
     end
     def edit
        @user = User.find(params[:id]) 
+    end
+    def promised
+        @user = User.find(params[:id])
     end
     def update
         @user = User.find(params[:id])
