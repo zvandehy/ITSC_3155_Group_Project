@@ -38,7 +38,11 @@ table a {
  text-shadow: none;
 }
 
-body {
- background-image: url('https://farm5.staticflickr.com/4020/4347776452_36d68aa699_b.jpg');
-}
-
+  body {
+      margin:0;
+      color:#edf3ff;
+      background:#c8c8c8;
+      background:url("background.jpg") fixed;
+      background-size: cover;
+      font:600 16px/18px 'Open Sans',sans-serif;
+  }

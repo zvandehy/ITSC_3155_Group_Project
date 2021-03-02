@@ -1,6 +1,15 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.welcometext {
+    color: #fff;
+    font: 18px Arial, sans-serif;
+    text-align: center;
+    line-height: 25px;
+}
+
+
 .affix {
     padding:0px;
     -webkit-transition:padding 0.2s linear;
@@ -19,15 +28,6 @@
     transition:padding 0.5s linear;  
   }
   
-  body {
-      margin:0;
-      color:#edf3ff;
-      background:#c8c8c8;
-      background:url(https://hdqwalls.com/download/material-design-4k-2048x1152.jpg) fixed;
-      background-size: cover;
-      font:600 16px/18px 'Open Sans',sans-serif;
-  }
-  
   :after,:before{box-sizing:border-box}
   .clearfix:after,.clearfix:before{content:'';display:table}
   .clearfix:after{clear:both;display:block}
@@ -44,8 +44,8 @@
       position:absolute;
       padding:90px 70px 50px 70px;
       margin-bottom: 20px;
-      background:rgba(0,0,0,0.5);
-      box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+      background:rgba(0,0,0,0.7);
+      box-shadow:0 12px 15px 0 rgba(0,0,0,.3),0 17px 50px 0 rgba(0,0,0,.22);
   }
   .login-html .sign-in-htm,
   .login-html .for-pwd-htm{

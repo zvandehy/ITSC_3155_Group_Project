@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   
   resources :users do
     resources :gifts
+    get 'promised', on: :member
   end
   
   resources :gifts do

@@ -1,55 +1,107 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.u-table {
-    border: solid 1px #DDEEEE;
+.profilepic {
+    float: left;
+}
+
+.usern {
+    position: absolute;
+    left: 225px;
+    text-align: left;
+    font: normal 40px Arial, sans-serif;
+}
+.imgleft {
+    left: 90px;
+    float: left;
+    text-align: right;
+}
+
+.index-table {
+    border: solid 1px black;
     border-collapse: collapse;
-    border-spacing: 0;
     font: normal 20px Arial, sans-serif;
     color: black;
     background-color: white;
+    table-layout: fixed;
+    width: 295px;
+    margin-right: 10px;
+    float: left;
 }
-.g-table {
-    border: solid 1px #DDEEEE;
+.index-table tbody td {
+    border: 0.5px solid black;
+    width: 100px;
+    padding: 15px;
+    text-shadow: 1px 1px 1px #fff;
+    font: normal 14px Arial, sans-serif;
+    overflow: auto;
+}
+
+.index-table td:nth-child(1) {
+  width: 82px;
+}
+.index-table td:nth-child(2) {
+  width: 100px;
+}
+
+.prom-table {
+    border: solid 1px black;
     border-collapse: collapse;
-    border-spacing: 0;
     font: normal 20px Arial, sans-serif;
     color: black;
     background-color: white;
+    table-layout: fixed;
+    width: 295px;
+    margin-right: 10px;
+    float: left;
 }
-
-.u-table thead th {
-    background-color: #DDEFEF;
-    border: solid 1px #DDEEEE;
-    color: #336B6B;
-    padding: 10px;
-    text-align: left;
+.prom-table tbody td {
+    border: 0.5px solid black;
+    width: 100px;
+    padding: 15px;
     text-shadow: 1px 1px 1px #fff;
     font: normal 14px Arial, sans-serif;
-}
-.g-table thead th {
-    background-color: #DDEFEF;
-    border: solid 1px #DDEEEE;
-    color: #336B6B;
-    padding: 10px;
-    text-align: left;
-    text-shadow: 1px 1px 1px #fff;
-    font: normal 14px Arial, sans-serif;
+    overflow: auto;
 }
 
-.u-table tbody td {
+.prom-table td:nth-child(1) {
+  width: 120px;
+}
+.prom-table td:nth-child(2) {
+  width: 120px;
+}
+.prom-table td:nth-child(3) {
+  width: 175px;
+}
+.prom-table td:nth-child(4) {
+  width: 165px;
+}
+
+.gifts-table {
     border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    font: normal 20px Arial, sans-serif;
+    color: black;
+    background-color: white;
+    table-layout: fixed;
+    width: 580px;
+}
+
+.gifts-table tbody td {
+    border: 0.5px solid black;
+    width: 100px;
     color: #333;
     padding: 15px;
     text-shadow: 1px 1px 1px #fff;
     font: normal 14px Arial, sans-serif;
+    overflow: auto;
 }
-.g-table tbody td {
-    border: solid 1px #DDEEEE;
-    color: #333;
-    padding: 15px;
-    text-shadow: 1px 1px 1px #fff;
-    font: normal 14px Arial, sans-serif;
+
+.gifts-table td:nth-child(1) {
+  width: 50px;
+}
+.gifts-table td:nth-child(3) {
+  width: 60px;
 }
 
 .allTitle {

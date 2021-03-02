@@ -3,32 +3,42 @@
 <br>
 <div class="login-wrap">
  <div class="login-html">
-<div class="allTitle">All Users</div>
+<div class="allTitle">Friends</div>
 <br>
 
-<table class="u-table">
-    <thread>
-        <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-    </thread>
-    
+
+<!-- Left table -->
+<table class="index-table">
     <tbody>
     <% @users.each do |user| %>
+    <% if user.id%2 == 0 %>
     <% if current_user != user %>
         <tr>
             <td><%= image_tag("profile.jpg", :height => 100, :width => 100, :alt => "Profile Picture") %></td>
-            <td><%= user.name %></td>
-            <td><%= user.email %></td>
+            <td><strong><%= user.name %></strong>
+            <br><%= user.email %><br><br><%= link_to "View Profile", user_path(user) %></td>
             
-            <td><%= link_to "View", user_path(user) %></td>
-            <% else %>
-            <!-- hide your profile from list -->
-            <% end %>
-        </tr>    
+            <!-- <td><%= link_to "View Profile", user_path(user) %></td>  -->
+        </tr> 
     <% end %>
+    <% end %>
+    <% end %>
+    </tbody>
+</table>
+
+<!-- Right table -->
+        <% @users.each do |user| %>
+        <% if user.id%2 == 1 %>
+        <% if current_user != user %>
+        <table class="index-table"><tbody>
+        <tr>
+            <td><%= image_tag("profile.jpg", :height => 100, :width => 100, :alt => "Profile Picture") %></td>
+            <td><strong><%= user.name %></strong>
+            <br><%= user.email %><br><br><%= link_to "View Profile", user_path(user) %></td>
+        </tr> 
+        <% end %>
+        <% end %>
+        <% end %>
     </tbody>
 </table>
 </div>
